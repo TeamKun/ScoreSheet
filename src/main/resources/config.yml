@@ -1,0 +1,7 @@
+spreadsheet:
+  id: <sheet id>
+  sheet: <sheet name>
+  range: A:B
+credential:
+  spreadsheet:
+    token: <token>

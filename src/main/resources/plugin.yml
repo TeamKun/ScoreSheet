@@ -1,0 +1,15 @@
+name: ScoreSheet
+version: ${project.version}
+main: net.teamfruit.scoresheet.ScoreSheet
+api-version: 1.15
+description: Google Spreadsheet から Scoreboard を取得
+
+commands:
+  scoresheet:
+    description: スプレッドシートからスコアボードを設定
+    usage: /scoresheet <fetch|set <sheetid>>
+    permission: scoresheet
+permissions:
+  scoresheet:
+    description: ScoreSheet
+    default: op

@@ -1,7 +1,21 @@
 spreadsheet:
   id: <sheet id>
   sheet: <sheet name>
-  range: A:B
+  data:
+    row:
+      data: 2
+    minecraft:
+      name: B
+    types:
+      - column: E
+        scoreboard:
+          name: youtube
+          title: YouTube登録者数
+      - column: L
+        scoreboard:
+          name: twitter
+          title: Twitterフォロワー
+
 credential:
   spreadsheet:
     token: <token>

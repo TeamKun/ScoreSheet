@@ -59,6 +59,7 @@ public class GoogleSheets {
                                     )),
                                     Stream.of(
                                             "majorDimension=COLUMNS",
+                                            "valueRenderOption=UNFORMATTED_VALUE",
                                             "key=" + token
                                     )
                             ).collect(Collectors.joining("&"))
@@ -86,7 +87,8 @@ public class GoogleSheets {
                 String[] valueRange = data.valueRanges.get(ix).values[0];
                 for (int iy = 0; iy < mc_name_data.length; iy++) {
                     int score = iy < valueRange.length ? NumberUtils.toInt(valueRange[iy]) : 0;
-                    objective.getScore(mc_name_data[iy]).setScore(score);
+                    if (mc_name_data[iy].length() <= 40)
+                        objective.getScore(mc_name_data[iy]).setScore(score);
                 }
             }
         } catch (IOException e) {
